@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+    <h1 class="display-1 text-center" style="color:#ffffff">Refran del dia</h1>
+    <p style="color:#ffffff">Cuando se corte el último árbol, cuando se contamine el último río, cuando se mate el último animal, nos daremos cuenta que el dinero no se come.</p>
+</header>
+
+<body>
+    <div style="text-align:center">
+        
+        <video width="320" height="240" autoplay muted playsinline  controls>
+            <source src="/media/images/ovejas.mp4" type="video/mp4">
+            Tu navegador no es compatible con videos HTML5
+        </video>
+        
+        <video width="320" height="240" autoplay muted playsinline  controls >
+            <source src="/media/images/selva.mp4" type="video/mp4">
+            Tu navegador no es compatible con videos HTML5
+        </video>
+        
+        <video width="320" height="240" autoplay muted playsinline loop controls >
+            <source src="/media/images/michi.mp4" type="video/mp4">
+            Tu navegador no es compatible con videos HTML5
+        </video>
+        
+    </div>
+</body>
+{% endblock %}

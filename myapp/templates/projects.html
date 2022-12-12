@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- Porfolio Section -->
+<div class="row my-4 text-center">
+
+    <h1 style="color:#ffffff">Mi Proyecto</h1>
+    <p style="color:#ffffff">Mis pequeños projectos a futuro ,por eso es mejor completar un pequeño proyecto que dejar uno grande a medio hacer</p>
+  
+    {% for project in projects %}
+    <div class="col-md-4 p-4">
+      <div class="card bg-black card-project">
+        <form method="POST" enctype='multipart/form-data'>
+
+          <img src="{{project.foto.url }}" class="card-img-top"/>
+          <div class="card-body">
+  
+            <h2 style="color:#ffffff">{{ project.title }}</h2>
+            <p style="color:#ffffff" align="justify">{{ project.description }}</p>
+
+            <h6 style="color:#ffffff" align="left">Tags:</h6>
+            <p style="color:#ffffff" align="left">{{project.tag}}</p>
+            
+          
+            {% if project.url_git %}
+            <a href="{{project.url_git}}" class="btn btn-light rounded-0 btn-sm" target="__blank" rel="noreferrer">Visita mi projecto</a>
+            {% endif %}
+          </div>
+
+        </form>
+        
+      </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<!--<main class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1>PROJECTOS</h1>
+            <ul class="list-group">
+                
+                {% for project in projects %}
+                <li class="list-group-item">
+                    <h6>Titulo del projecto:</h6>
+                    <p>{{project.title}}</p>
+
+                    <h6>Descripcion del projecto:</h6>
+                    <p>{{project.description}}</p>
+
+                    <h6>Tags:</h6>
+                    <p>{{project.tag}}</p>
+
+                    <img src="{{project.foto.url}}" alt="">
+
+                    <h6>URL:</h6>
+                    {% if project.url_git %}
+                    <a href="{{project.url_git}}">{{project.url_git}}</a>
+                    {% endif %}
+                    
+
+                    <button>Delete</button>
+                    <button>Editar</button>
+                </li>
+                {% endfor %}
+
+
+            </ul>
+        </div>
+    </div>
+</main>
+
+
+{% endblock %} -->
